@@ -25,6 +25,13 @@ export const Primary: Story = {
 export const Secondary: Story = {
   args: {
     variant: 'outlined',
+    color: 'secondary',
+    children: 'Button'
+  }
+};
+
+export const Text: Story = {
+  args: {
     children: 'Button'
   }
 };
