@@ -6,15 +6,15 @@ const theme = createTheme({
   palette: {
     primary: {
       main: '#921FED',
-      contrastText: '#FFFFFF'
+      contrastText: '#FCFAFA'
     },
     secondary: {
-      main: '#FFFFFF',
+      main: '#FCFAFA',
       contrastText: '#921FED'
     },
     text: {
-      primary: '#5F556D'
-      // secondary: "#FFFFFF",
+      primary: '#5F556D',
+      secondary: '#000000'
     },
     grey: {
       100: '#FBFAFC',
@@ -29,15 +29,15 @@ const theme = createTheme({
       main: '#FFCF32'
     },
     background: {
-      paper: '#FBFAFC'
+      paper: '#F7E4A8'
     }
   },
   typography: {
     fontSize: 20,
     fontFamily: "'Dosis', sans-serif",
-    fontWeightRegular: 400,
-    fontWeightMedium: 500,
-    fontWeightBold: 600
+    fontWeightRegular: 400
+    // fontWeightMedium: 500,
+    // fontWeightBold: 600
   },
   components: {
     MuiButton: MuiButtonConfig,

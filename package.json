@@ -1,6 +1,7 @@
 {
   "name": "dog-api-init",
   "private": true,
+  "init-author-name": "Vita Babenko",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -30,7 +31,8 @@
     "@mui/material": "^5.14.13",
     "@testing-library/react": "^14.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite-plugin-svgr": "^4.1.0"
   },
   "devDependencies": {
     "@emotion/jest": "^11.11.0",
