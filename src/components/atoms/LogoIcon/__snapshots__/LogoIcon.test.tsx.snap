@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogoIcon should match snapshot Component 1`] = `
+.emotion-0 {
+  margin: 0;
+  font: inherit;
+  color: #921FED;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: rgba(146, 31, 237, 0.4);
+  underline: none;
+}
+
+.emotion-0:hover {
+  text-decoration-color: inherit;
+}
+
+<div>
+  <a
+    class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways emotion-0"
+    href="/"
+  >
+    <test-file-stub
+      aria-hidden="true"
+      classname="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gg0jzq-MuiSvgIcon-root"
+      focusable="false"
+    />
+  </a>
+</div>
+`;
