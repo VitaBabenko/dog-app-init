@@ -1,8 +1,8 @@
-import SvgIcon from '@mui/material/SvgIcon';
+import { SvgIcon } from '@mui/material';
 
-import HeartIconDefault from '../../../icons/HeartIconDefault.svg?react';
-import HeartIconClick from '../../../icons/HeartIconClick.svg?react';
-import HeartIconHover from '../../../icons/HeartIconHover.svg?react';
+import HeartIconDefault from '../../../assets/icons/HeartIconDefault.svg?react';
+import HeartIconClick from '../../../assets/icons/HeartIconClick.svg?react';
+import HeartIconHover from '../../../assets/icons/HeartIconHover.svg?react';
 
 type HeartIconProps = {
   state?: 'default' | 'hover' | 'active';
