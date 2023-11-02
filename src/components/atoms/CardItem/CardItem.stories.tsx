@@ -6,7 +6,7 @@ const meta = {
   component: CardItem,
   argTypes: {
     variant: {
-      options: ['primary', 'secondary'],
+      options: ['primary', 'smallRadiusBorder', 'bigRadiusBorder'],
       control: 'radio'
     }
   }
@@ -17,12 +17,21 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    variant: 'primary'
+    variant: 'primary',
+    borderRadius: 20
   }
 };
 
-export const Secondary: Story = {
+export const SmallRadiusBorder: Story = {
   args: {
-    variant: 'secondary'
+    variant: 'smallRadiusBorder',
+    borderRadius: 10
+  }
+};
+
+export const BigRadiusBorder: Story = {
+  args: {
+    variant: 'bigRadiusBorder',
+    borderRadius: 40
   }
 };

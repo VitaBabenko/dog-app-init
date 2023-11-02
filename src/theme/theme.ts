@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 import { MuiButtonConfig } from './button.config';
-import { MuiCardConfig } from './card.config';
+import { MuiIconButtonConfig } from './iconButton.config';
 
 // A custom theme for this app
 const theme = createTheme({
@@ -46,7 +46,7 @@ const theme = createTheme({
   },
   components: {
     MuiButton: MuiButtonConfig,
-    MuiCard: MuiCardConfig,
+    MuiIconButton: MuiIconButtonConfig,
     MuiTab: {
       defaultProps: {
         disableRipple: true
