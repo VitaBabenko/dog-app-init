@@ -1,8 +1,8 @@
 import { composeStories } from '@storybook/react';
-import * as stories from './ButtonIconLike.stories';
+import * as stories from './IconPlus.stories';
 import { testSnapshot } from '../../../test/utils/snapshot.utils';
 
-describe('ButttonIconLike', () => {
+describe('IconPlus', () => {
   const { Primary } = composeStories(stories);
   testSnapshot(<Primary />);
 });

@@ -3,7 +3,9 @@ import * as stories from './CardItem.stories';
 import { testSnapshot } from '../../../test/utils/snapshot.utils';
 
 describe('CardItem', () => {
-  const { Primary, Secondary } = composeStories(stories);
+  const { Primary, SmallRadiusBorder, BigRadiusBorder } =
+    composeStories(stories);
   testSnapshot(<Primary />);
-  testSnapshot(<Secondary />);
+  testSnapshot(<SmallRadiusBorder />);
+  testSnapshot(<BigRadiusBorder />);
 });

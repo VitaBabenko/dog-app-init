@@ -1,16 +1,16 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { ButtonIconPlus } from '.';
+import { IconPlus } from '.';
 
 const meta = {
-  title: 'Atoms/ButtonIconPlus',
-  component: ButtonIconPlus,
+  title: 'Atoms/IconPlus',
+  component: IconPlus,
   argTypes: {
     state: {
       options: ['default', 'hover'],
       control: 'radio'
     }
   }
-} satisfies Meta<typeof ButtonIconPlus>;
+} satisfies Meta<typeof IconPlus>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

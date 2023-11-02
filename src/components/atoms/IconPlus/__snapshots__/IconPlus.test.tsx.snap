@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ButtonIconPlus should match snapshot Component 1`] = `
+exports[`IconPlus should match snapshot Component 1`] = `
 <div>
   <test-file-stub
     aria-hidden="true"
