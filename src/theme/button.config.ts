@@ -16,7 +16,7 @@ export const MuiButtonConfig: Components<Theme>['MuiButton'] = {
       textTransform: 'none',
       fontSize: 20,
       lineHeight: 'normal',
-      padding: theme.spacing(1, 5),
+      padding: theme.spacing(1, 4),
       '&:hover, &:active': {
         boxShadow: 'none',
         outline: 'none'
@@ -31,7 +31,7 @@ export const MuiButtonConfig: Components<Theme>['MuiButton'] = {
         backgroundColor: palette.action.hover,
         boxShadow: `3px 3px 0px 0px ${palette.text.secondary}`
       },
-      '&:active': {
+      '&:active, &:focus': {
         backgroundColor: palette.action.selected,
         boxShadow: `3px 3px 0px 0px ${palette.text.secondary}`
       }
@@ -45,7 +45,7 @@ export const MuiButtonConfig: Components<Theme>['MuiButton'] = {
         backgroundColor: palette.grey[100],
         boxShadow: `3px 3px 0px 0px ${palette.text.secondary}`
       },
-      '&:active': {
+      '&:active, &:focus': {
         backgroundColor: palette.grey[300],
         boxShadow: `3px 3px 0px 0px ${palette.text.secondary}`
       }
@@ -61,7 +61,7 @@ export const MuiButtonConfig: Components<Theme>['MuiButton'] = {
         borderColor: palette.action.hover,
         boxShadow: `3px 3px 0px 0px ${palette.text.secondary}`
       },
-      '&:active': {
+      '&:active, &:focus': {
         borderColor: palette.action.selected,
         backgroundColor: 'transparent',
         boxShadow: `3px 3px 0px 0px ${palette.text.secondary}`
@@ -76,12 +76,12 @@ export const MuiButtonConfig: Components<Theme>['MuiButton'] = {
         backgroundColor: '#FFFFFF rgba(255, 255, 255, 0.04)',
         borderColor: palette.secondary.main
       },
-      '&:active': {
+      '&:active, &:focus': {
         borderColor: palette.grey[300],
         backgroundColor: 'transparent'
       }
     }),
-    text: ({ theme: { palette, typography } }) => ({
+    textInherit: ({ theme: { palette, typography } }) => ({
       fontFamily: typography.fontFamily,
       color: palette.primary.contrastText,
       backgroundColor: 'transparent',
@@ -89,8 +89,23 @@ export const MuiButtonConfig: Components<Theme>['MuiButton'] = {
         color: palette.warning.main,
         backgroundColor: 'transparent'
       },
-      '&:active': {
+      '&:active, &:focus': {
         color: palette.primary.main
+      }
+    }),
+    textPrimary: ({ theme }) => ({
+      fontFamily: theme.typography.fontFamily,
+      padding: theme.spacing(1, 1.7),
+      color: theme.palette.text.primary,
+      backgroundColor: 'transparent',
+      '&:hover': {
+        color: theme.palette.primary.contrastText,
+        backgroundColor: theme.palette.action.hover
+      },
+      '&:active, &:focus': {
+        color: theme.palette.primary.contrastText,
+        backgroundColor: theme.palette.secondary.contrastText,
+        boxShadow: `2px 2px 0px 0px ${theme.palette.text.secondary}`
       }
     })
   },
