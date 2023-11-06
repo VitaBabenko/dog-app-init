@@ -1,0 +1,382 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CardItem should match snapshot Component 1`] = `
+.emotion-0 {
+  background-color: #F7E4A8;
+  color: #5F556D;
+  -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: static;
+  background-color: #921FED;
+  color: #FCFAFA;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0px 0px 32px 32px;
+  padding: 20px 100px 16px 100px;
+  background-color: #ADA7B8;
+  box-shadow: 3px 3px 0px 0px #000000;
+}
+
+.emotion-1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-width: 1161px;
+}
+
+.emotion-2 {
+  margin-left: 60px;
+  margin-right: 40px;
+}
+
+.emotion-3 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Dosis',sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.75;
+  text-transform: uppercase;
+  min-width: 64px;
+  padding: 6px 16px;
+  border-radius: 4px;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: #FCFAFA;
+  background-color: #921FED;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+  border-radius: 10px;
+  box-shadow: none;
+  text-transform: none;
+  font-size: 20px;
+  line-height: normal;
+  padding: 8px 32px;
+  font-family: 'Dosis',sans-serif;
+  background-color: #921FED;
+  color: #FCFAFA;
+  box-shadow: 3px 3px 0px 0px #000000;
+  margin-right: 50px;
+  padding: 4px 10px;
+}
+
+.emotion-3::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-3.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-3 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-3:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgb(102, 21, 165);
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+}
+
+@media (hover: none) {
+  .emotion-3:hover {
+    background-color: #921FED;
+  }
+}
+
+.emotion-3:active {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+}
+
+.emotion-3.Mui-focusVisible {
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
+}
+
+.emotion-3.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+.emotion-3:hover,
+.emotion-3:active {
+  box-shadow: none;
+  outline: none;
+}
+
+.emotion-3:hover {
+  background-color: #A239F4;
+  box-shadow: 3px 3px 0px 0px #000000;
+}
+
+.emotion-3:active,
+.emotion-3:focus {
+  background-color: #B568F2;
+  box-shadow: 3px 3px 0px 0px #000000;
+}
+
+.emotion-4 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: 'Dosis',sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.75;
+  text-transform: uppercase;
+  min-width: 64px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: #921FED;
+  border-radius: 10px;
+  box-shadow: none;
+  text-transform: none;
+  font-size: 20px;
+  line-height: normal;
+  padding: 8px 32px;
+  font-family: 'Dosis',sans-serif;
+  padding: 8px 13.6px;
+  color: #5F556D;
+  background-color: transparent;
+  margin-right: 50px;
+  padding: 4px 10px;
+}
+
+.emotion-4::-moz-focus-inner {
+  border-style: none;
+}
+
+.emotion-4.Mui-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
+@media print {
+  .emotion-4 {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+}
+
+.emotion-4:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  background-color: rgba(146, 31, 237, 0.04);
+}
+
+@media (hover: none) {
+  .emotion-4:hover {
+    background-color: transparent;
+  }
+}
+
+.emotion-4.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+.emotion-4:hover,
+.emotion-4:active {
+  box-shadow: none;
+  outline: none;
+}
+
+.emotion-4:hover {
+  color: #FCFAFA;
+  background-color: #A239F4;
+}
+
+.emotion-4:active,
+.emotion-4:focus {
+  color: #FCFAFA;
+  background-color: #921FED;
+  box-shadow: 2px 2px 0px 0px #000000;
+}
+
+.emotion-8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 0 30px;
+}
+
+<div>
+  <header
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic emotion-0"
+  >
+    <div
+      class="MuiBox-root emotion-1"
+    >
+      <test-file-stub
+        aria-hidden="true"
+        classname="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1gg0jzq-MuiSvgIcon-root"
+        focusable="false"
+      />
+      <div
+        class="MuiBox-root emotion-2"
+      >
+        <a
+          aria-current="page"
+          class="active"
+          href="/"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium emotion-3"
+            tabindex="0"
+            type="button"
+          >
+            Main
+          </button>
+        </a>
+        <a
+          class=""
+          href="/breed"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium emotion-4"
+            tabindex="0"
+            type="button"
+          >
+            Breeds
+          </button>
+        </a>
+        <a
+          class=""
+          href="/vote"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium emotion-4"
+            tabindex="0"
+            type="button"
+          >
+            Vote
+          </button>
+        </a>
+        <a
+          class=""
+          href="/history"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium emotion-4"
+            tabindex="0"
+            type="button"
+          >
+            History
+          </button>
+        </a>
+        <a
+          class=""
+          href="/upload"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium emotion-4"
+            tabindex="0"
+            type="button"
+          >
+            Your uploads
+          </button>
+        </a>
+      </div>
+      <test-file-stub
+        aria-hidden="true"
+        classname="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1v8usww-MuiSvgIcon-root"
+        focusable="false"
+      />
+      <div
+        class="MuiBox-root emotion-8"
+      >
+        <test-file-stub
+          aria-hidden="true"
+          classname="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1v8usww-MuiSvgIcon-root"
+          focusable="false"
+        />
+      </div>
+    </div>
+  </header>
+</div>
+`;
