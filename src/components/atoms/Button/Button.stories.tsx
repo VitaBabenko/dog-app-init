@@ -6,7 +6,7 @@ const meta = {
   component: Button,
   argTypes: {
     variant: {
-      options: ['contained', 'outlined'],
+      options: ['contained', 'outlined', 'text'],
       control: 'radio'
     }
   }
@@ -32,6 +32,16 @@ export const Secondary: Story = {
 
 export const Text: Story = {
   args: {
+    variant: 'text',
+    color: 'inherit',
+    children: 'Button'
+  }
+};
+
+export const TextMenu: Story = {
+  args: {
+    variant: 'text',
+    color: 'primary',
     children: 'Button'
   }
 };
