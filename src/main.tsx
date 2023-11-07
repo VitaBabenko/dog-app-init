@@ -5,19 +5,25 @@ import App from './App';
 import './index.css';
 import { DogAppThemeProvider } from './theme';
 import {
+  MainPage,
   BreedsPage,
   BreedItemPage,
   VotePage,
   HistoryPage,
-  UploadPage
+  UploadPage,
+  ErrorPage
 } from './pages';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
-    errorElement: <div>Error 404</div>,
+    errorElement: <ErrorPage />,
     children: [
+      {
+        path: '',
+        element: <MainPage />
+      },
       {
         path: 'breed',
         element: <BreedsPage />
