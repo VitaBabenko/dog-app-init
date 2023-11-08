@@ -29,7 +29,7 @@ const headerMenu = [
   }
 ];
 
-const CustomizedButton = styled(Button)`
+const StyledButton = styled(Button)`
   margin-right: 50px;
   padding: 4px 10px;
 `;
@@ -39,12 +39,12 @@ export const NavBar = () => (
     {headerMenu.map(item => (
       <NavLink to={item.path} key={item.id}>
         {({ isActive }) => (
-          <CustomizedButton
+          <StyledButton
             variant={isActive ? 'contained' : 'text'}
-            key={item.id}
+            key={item.path}
           >
             {item.title}
-          </CustomizedButton>
+          </StyledButton>
         )}
       </NavLink>
     ))}
