@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar should match snapshot Component 1`] = `
+.emotion-0 {
+  display: grid;
+  grid-template-columns: repeat(3, 372px);
+  grid-gap: 22px;
+}
+
+.emotion-0 img {
+  margin-bottom: 14px;
+  height: 274px;
+}
+
+.emotion-0 p {
+  padding: 0px 28px;
+}
+
+.emotion-0 .MuiButton-text {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: block;
+  background-color: transparent;
+  color: #FFCF32;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  />
+</div>
+`;

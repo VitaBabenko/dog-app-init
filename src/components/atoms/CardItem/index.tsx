@@ -8,9 +8,16 @@ type CardItemProps = {
 export const CardItem = styled(Box)<CardItemProps>(
   ({ theme, variant, borderRadius }) => ({
     position: 'relative',
+    cursor: 'pointer',
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+    img: {
+      display: 'block',
+      width: '100%',
+      objectFit: 'cover',
+      borderRadius: 'inherit'
+    },
     maxWidth: 590,
     minHeight: 90,
     backgroundColor: theme.palette.common.white,
