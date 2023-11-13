@@ -2,16 +2,18 @@ import { Components, Theme } from '@mui/material';
 
 export const MuiIconButtonConfig: Components<Theme>['MuiIconButton'] = {
   styleOverrides: {
-    root: ({ theme }) => ({
-      border: theme.palette.primary.main,
+    root: () => ({
+      border: 'none',
       boxShadow: 'none',
       '&:hover': {
         backgroundColor: 'none',
-        border: 'none'
+        border: 'none',
+        boxShadow: 'none'
       },
-      '&:active': {
+      '&:active, &:focus': {
         backgroundColor: 'none',
-        border: 'none'
+        border: 'none',
+        boxShadow: 'none'
       }
     }),
     colorPrimary: ({ theme }) => ({
