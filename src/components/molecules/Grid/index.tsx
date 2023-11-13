@@ -1,9 +1,9 @@
 import { Box, IconButton, styled } from '@mui/material';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { CardItem } from '../../atoms/CardItem';
 import { IconHeart } from '../../atoms/IconHeart';
-import { useGetImagesQuery } from '../../../services/images';
 import { useAddFavouritesMutation } from '../../../services/favourites';
+import { useGetImagesWithFavourites } from '../../../hooks';
 
 const StyledBox = styled(Box)({
   display: 'grid',
@@ -53,9 +53,15 @@ const StyledBox = styled(Box)({
   }
 });
 
-export const Grid = () => {
-  const { data: images, isLoading } = useGetImagesQuery({ limit: 10, page: 0 });
+type GridProps = {
+  page: number;
+};
+
+export const Grid: FC<GridProps> = ({ page }) => {
   const [addFavourite] = useAddFavouritesMutation();
+  const { data: favouritesImages, isLoading } = useGetImagesWithFavourites({
+    page
+  });
   const [isHoveredCard, setIsHoveredCard] = useState<number | null>(null);
 
   const handleBtnAdd = (id: string) => () => {
@@ -66,7 +72,7 @@ export const Grid = () => {
     <>
       {isLoading && <div>Loading...</div>}
       <StyledBox>
-        {(images || []).map((item, index) => {
+        {(favouritesImages || []).map((item, index) => {
           const isHover = isHoveredCard === index;
 
           return (
@@ -78,16 +84,33 @@ export const Grid = () => {
               onMouseOut={() => setIsHoveredCard(null)}
             >
               <img src={item.url} alt={item.id} height="100%" />
-              <IconButton
-                sx={{ position: 'absolute', top: '10px', right: '10px' }}
-                onClick={handleBtnAdd(item.id)}
-              >
-                {isHover ? (
-                  <IconHeart state="hover" />
-                ) : (
-                  <IconHeart state="default" />
-                )}
-              </IconButton>
+              {item.isFavourite ? (
+                <IconButton
+                  sx={{
+                    position: 'absolute',
+                    top: '10px',
+                    right: '10px'
+                  }}
+                  onClick={handleBtnAdd(item.id)}
+                >
+                  <IconHeart state="active" />
+                </IconButton>
+              ) : (
+                <IconButton
+                  sx={{
+                    position: 'absolute',
+                    top: '10px',
+                    right: '10px'
+                  }}
+                  onClick={handleBtnAdd(item.id)}
+                >
+                  {isHover ? (
+                    <IconHeart state="hover" />
+                  ) : (
+                    <IconHeart state="default" />
+                  )}
+                </IconButton>
+              )}
             </CardItem>
           );
         })}

@@ -17,7 +17,7 @@ type FavouriteResponse = {
   user_id: string;
 }[];
 
-export const FavouriteApi = api.injectEndpoints({
+export const favouriteApi = api.injectEndpoints({
   endpoints: build => ({
     addFavourites: build.mutation<unknown, Favourite>({
       query: body => ({
@@ -37,4 +37,4 @@ export const FavouriteApi = api.injectEndpoints({
   })
 });
 
-export const { useAddFavouritesMutation, useGetFavouritesQuery } = FavouriteApi;
+export const { useAddFavouritesMutation, useGetFavouritesQuery } = favouriteApi;
