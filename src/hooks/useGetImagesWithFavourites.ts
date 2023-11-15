@@ -1,25 +1,28 @@
 import { useGetFavouritesQuery } from '../services/favourites';
-import { useGetImagesQuery } from '../services/images';
+import { useGetImagesQuery, Order } from '../services/images';
 import { useTypedSelector } from '../services/store';
 import { selectImagesWithFavourites } from '../services/selectors';
 
 type GetImagesWithFavouritesProps = {
   limit?: number;
   page: number;
+  order: Order;
 };
 
 export const useGetImagesWithFavourites = ({
   limit = 10,
-  page = 0
+  page = 0,
+  order = Order.ASC
 }: GetImagesWithFavouritesProps) => {
   const { isLoading: isLoadingImages } = useGetImagesQuery({
     limit,
-    page
+    page,
+    order
   });
   const { isLoading: isLoadingFavourites } = useGetFavouritesQuery();
   const favouritesImages = useTypedSelector(
     selectImagesWithFavourites({
-      getImagesProps: { limit, page }
+      getImagesProps: { limit, page, order }
     })
   );
 

@@ -28,11 +28,20 @@ export interface User {
   phone: string;
 }
 
+export enum Order {
+  RANDOM,
+  ASC,
+  DESC
+}
+
 export const imagesApi = api.injectEndpoints({
   endpoints: build => ({
-    getImages: build.query<ImagesResponse, { limit?: number; page?: number }>({
-      query: ({ limit = 10, page = 0 }) => ({
-        url: `images/search?limit=${limit}&page=${page}`
+    getImages: build.query<
+      ImagesResponse,
+      { limit?: number; page?: number; order?: Order }
+    >({
+      query: ({ limit = 10, page = 0, order = Order.ASC }) => ({
+        url: `images/search?limit=${limit}&page=${page}&order=${order}`
       }),
       providesTags: (result = []) => [
         ...result.map(({ id }) => ({ type: 'Images', id }) as const),
