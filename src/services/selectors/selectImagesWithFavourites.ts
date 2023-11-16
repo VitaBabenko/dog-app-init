@@ -1,12 +1,13 @@
 import { createSelector } from '@reduxjs/toolkit';
 import { RootState } from '../store';
-import { imagesApi } from '../images';
+import { imagesApi, Order } from '../images';
 import { favouriteApi } from '../favourites';
 
 export interface GetImagesProps {
   getImagesProps: {
     limit: number;
     page: number;
+    order: Order;
   };
 }
 

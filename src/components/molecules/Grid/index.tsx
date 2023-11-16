@@ -1,5 +1,6 @@
 import { Box, IconButton, styled } from '@mui/material';
 import { FC, useState } from 'react';
+import { Order } from '../../../services/images';
 import { CardItem } from '../../atoms/CardItem';
 import { IconHeart } from '../../atoms/IconHeart';
 import { useAddFavouritesMutation } from '../../../services/favourites';
@@ -55,12 +56,14 @@ const StyledBox = styled(Box)({
 
 type GridProps = {
   page: number;
+  order: Order;
 };
 
-export const Grid: FC<GridProps> = ({ page }) => {
+export const Grid: FC<GridProps> = ({ page, order }) => {
   const [addFavourite] = useAddFavouritesMutation();
   const { data: favouritesImages, isLoading } = useGetImagesWithFavourites({
-    page
+    page,
+    order
   });
   const [isHoveredCard, setIsHoveredCard] = useState<number | null>(null);
 
