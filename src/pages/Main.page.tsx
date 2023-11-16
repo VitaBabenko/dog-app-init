@@ -6,15 +6,20 @@ import { PaginationWrap } from '../components/organisms/PaginationWrap';
 
 export const MainPage = () => {
   const [page, setPage] = useState(1);
-  const ASCFilter = Order.ASC;
+  const [order, setOrder] = useState(Order.ASC);
+
   const handleChange = (_event: React.ChangeEvent<unknown>, value: number) => {
     setPage(value);
+  };
+  const onOrderClick = (value: Order) => {
+    console.log('value', value);
+    setOrder(value);
   };
 
   return (
     <>
-      <SortingWrap />
-      <Grid page={page} order={ASCFilter} />
+      <SortingWrap order={order} onOrderClick={onOrderClick} />
+      <Grid page={page} order={order} />
       <PaginationWrap page={page} handleChange={handleChange} />
     </>
   );
