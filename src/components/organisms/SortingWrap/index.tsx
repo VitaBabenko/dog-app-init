@@ -1,4 +1,4 @@
-import { Stack, Typography, IconButton, SvgIcon } from '@mui/material';
+import { Stack, Typography, IconButton, SvgIcon, styled } from '@mui/material';
 import { FC } from 'react';
 import { Order } from '../../../services/images';
 import IconUpFilter from '../../../assets/icons/IconUpFilter.svg?react';
@@ -7,25 +7,24 @@ import IconRandomFilter from '../../../assets/icons/IconRandomFilter.svg?react';
 
 type SortingWrapProps = {
   order: Order;
-  onOrderClick: (order: Order) => Order;
+  onOrderClick: (order: Order) => void;
 };
 
-export const SortingWrap: FC<SortingWrapProps> = ({ order, onOrderClick }) => {
-  console.log('order', order);
-  // const ASCFilter = Order.ASC;
-  // console.log('ASCFilter', ASCFilter);
-  // const DESCFilter = Order.DESC;
-  // console.log('DESCFilter', DESCFilter);
-  // const RANDOMFilter = Order.RANDOM;
-  // console.log('RANDOMFilter', RANDOMFilter);
+const StyledStack = styled(Stack)({
+  justifyContent: 'flex-end',
+  width: '1160px',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+  marginBottom: '36px'
+});
 
-  return (
-    <Stack direction="row" spacing={2}>
-      <Typography color="#ADA7B8">Sort by:</Typography>
-
-      {/* <IconButton
+export const SortingWrap: FC<SortingWrapProps> = ({ order, onOrderClick }) => (
+  <StyledStack direction="row" spacing={2}>
+    <Typography color="#ADA7B8">Sort by:</Typography>
+    {order === Order.ASC ? (
+      <IconButton
         color="secondary"
-        onClick={onOrderClick(Order.ASC)}
+        onClick={() => onOrderClick(Order.ASC)}
         sx={{
           width: 58,
           height: 36,
@@ -39,10 +38,11 @@ export const SortingWrap: FC<SortingWrapProps> = ({ order, onOrderClick }) => {
           inheritViewBox
           sx={{ width: 17, height: 20 }}
         />
-      </IconButton> */}
+      </IconButton>
+    ) : (
       <IconButton
         color="secondary"
-        onClick={onOrderClick(Order.ASC)}
+        onClick={() => onOrderClick(Order.ASC)}
         sx={{ width: 58, height: 36 }}
       >
         <SvgIcon
@@ -51,9 +51,11 @@ export const SortingWrap: FC<SortingWrapProps> = ({ order, onOrderClick }) => {
           sx={{ width: 17, height: 20 }}
         />
       </IconButton>
-      {/* <IconButton
+    )}
+    {order === Order.DESC ? (
+      <IconButton
         color="secondary"
-        onClick={onOrderClick(Order.DESC)}
+        onClick={() => onOrderClick(Order.DESC)}
         sx={{
           width: 58,
           height: 36,
@@ -70,11 +72,11 @@ export const SortingWrap: FC<SortingWrapProps> = ({ order, onOrderClick }) => {
             height: 20
           }}
         />
-      </IconButton> */}
-
+      </IconButton>
+    ) : (
       <IconButton
         color="secondary"
-        onClick={onOrderClick(Order.DESC)}
+        onClick={() => onOrderClick(Order.DESC)}
         sx={{ width: 58, height: 36 }}
       >
         <SvgIcon
@@ -83,9 +85,11 @@ export const SortingWrap: FC<SortingWrapProps> = ({ order, onOrderClick }) => {
           sx={{ width: 17, height: 20 }}
         />
       </IconButton>
-      {/* <IconButton
+    )}
+    {order === Order.RANDOM ? (
+      <IconButton
         color="secondary"
-        onClick={onOrderClick(Order.RANDOM)}
+        onClick={() => onOrderClick(Order.RANDOM)}
         sx={{
           width: 58,
           height: 36,
@@ -99,11 +103,11 @@ export const SortingWrap: FC<SortingWrapProps> = ({ order, onOrderClick }) => {
           inheritViewBox
           sx={{ width: 17, height: 20 }}
         />
-      </IconButton> */}
-
+      </IconButton>
+    ) : (
       <IconButton
         color="secondary"
-        onClick={onOrderClick(Order.RANDOM)}
+        onClick={() => onOrderClick(Order.RANDOM)}
         sx={{ width: 58, height: 36 }}
       >
         <SvgIcon
@@ -112,6 +116,6 @@ export const SortingWrap: FC<SortingWrapProps> = ({ order, onOrderClick }) => {
           sx={{ width: 17, height: 20 }}
         />
       </IconButton>
-    </Stack>
-  );
-};
+    )}
+  </StyledStack>
+);

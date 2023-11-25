@@ -12,7 +12,6 @@ export const MainPage = () => {
     setPage(value);
   };
   const onOrderClick = (value: Order) => {
-    console.log('value', value);
     setOrder(value);
   };
 

@@ -1,6 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`PaginationWrap should match snapshot Component 1`] = `
+.emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  margin-top: 20px;
+  width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .emotion-1 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -161,6 +176,25 @@ exports[`PaginationWrap should match snapshot Component 1`] = `
   border-radius: inherit;
 }
 
+.emotion-16 {
+  font-family: 'Dosis',sans-serif;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 1.43;
+  border-radius: 16px;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: 32px;
+  padding: 0 6px;
+  margin: 0 3px;
+  color: #5F556D;
+  height: auto;
+}
+
+.emotion-16.Mui-disabled {
+  opacity: 0.38;
+}
+
 <div>
   <nav
     aria-label="pagination navigation"
@@ -246,6 +280,52 @@ exports[`PaginationWrap should match snapshot Component 1`] = `
           type="button"
         >
           3
+          <span
+            class="MuiTouchRipple-root emotion-7"
+          />
+        </button>
+      </li>
+      <li>
+        <button
+          aria-label="Go to page 4"
+          class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page emotion-2"
+          tabindex="0"
+          type="button"
+        >
+          4
+          <span
+            class="MuiTouchRipple-root emotion-7"
+          />
+        </button>
+      </li>
+      <li>
+        <button
+          aria-label="Go to page 5"
+          class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page emotion-2"
+          tabindex="0"
+          type="button"
+        >
+          5
+          <span
+            class="MuiTouchRipple-root emotion-7"
+          />
+        </button>
+      </li>
+      <li>
+        <div
+          class="MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-ellipsis emotion-16"
+        >
+          …
+        </div>
+      </li>
+      <li>
+        <button
+          aria-label="Go to page 28"
+          class="MuiButtonBase-root MuiPaginationItem-root MuiPaginationItem-sizeMedium MuiPaginationItem-text MuiPaginationItem-circular MuiPaginationItem-page emotion-2"
+          tabindex="0"
+          type="button"
+        >
+          28
           <span
             class="MuiTouchRipple-root emotion-7"
           />

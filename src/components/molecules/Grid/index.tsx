@@ -6,12 +6,19 @@ import { IconHeart } from '../../atoms/IconHeart';
 import { useAddFavouritesMutation } from '../../../services/favourites';
 import { useGetImagesWithFavourites } from '../../../hooks';
 
+type GridProps = {
+  page: number;
+  order: Order;
+};
+
 const StyledBox = styled(Box)({
   display: 'grid',
   gridTemplateColumns: 'repeat(4, 275px)',
   gridAutoRows: '196px',
   gridGap: '20px',
-  margin: '0 auto',
+  width: '1160px',
+  marginLeft: 'auto',
+  marginRight: 'auto',
   '& .MuiBox-root:first-of-type': {
     gridColumn: '1 / 3',
     gridRow: '1 / 3'
@@ -53,11 +60,6 @@ const StyledBox = styled(Box)({
     gridRow: '4'
   }
 });
-
-type GridProps = {
-  page: number;
-  order: Order;
-};
 
 export const Grid: FC<GridProps> = ({ page, order }) => {
   const [addFavourite] = useAddFavouritesMutation();

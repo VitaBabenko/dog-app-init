@@ -3,13 +3,7 @@ import { PaginationWrap } from '.';
 
 const meta = {
   title: 'Organisms/PaginationWrap',
-  component: PaginationWrap,
-  argTypes: {
-    variant: {
-      options: ['default'],
-      control: 'radio'
-    }
-  }
+  component: PaginationWrap
 } satisfies Meta<typeof PaginationWrap>;
 
 export default meta;
@@ -17,6 +11,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    variant: 'default'
+    page: 1
   }
 };
