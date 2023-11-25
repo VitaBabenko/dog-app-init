@@ -3,10 +3,7 @@ import { createApi, fetchBaseQuery, retry } from '@reduxjs/toolkit/query/react';
 const baseQuery = fetchBaseQuery({
   baseUrl: 'https://api.thedogapi.com/v1',
   prepareHeaders: headers => {
-    headers.set(
-      'x-api-key',
-      `live_BL296k8ZeISNLSjYK8BEFc5o6dQnfT2rhnqmqRJUpj0HxD7QOJNnaZkrQmgY9WKm`
-    );
+    headers.set('x-api-key', import.meta.env.VITE_API_KEY);
     return headers;
   }
 });
