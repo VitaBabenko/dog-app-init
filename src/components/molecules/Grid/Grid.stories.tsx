@@ -10,5 +10,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
-  args: {}
+  args: {
+    order: 1,
+    page: 1
+  }
 };

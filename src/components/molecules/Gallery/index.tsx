@@ -1,8 +1,12 @@
 import { Box, Button, IconButton, Typography, styled } from '@mui/material';
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import { CardItem } from '../../atoms/CardItem';
 import { IconHeart } from '../../atoms/IconHeart';
 import { useGetBreedsQuery } from '../../../services/breeds';
+
+type GalleryProps = {
+  page: number;
+};
 
 const StyledBox = styled(Box)(({ theme }) => ({
   display: 'grid',
@@ -25,8 +29,8 @@ const StyledBox = styled(Box)(({ theme }) => ({
   }
 }));
 
-export const Gallery = () => {
-  const { data: breeds, isLoading } = useGetBreedsQuery({ limit: 6, page: 0 });
+export const Gallery: FC<GalleryProps> = ({ page }) => {
+  const { data: breeds, isLoading } = useGetBreedsQuery({ limit: 6, page });
   const [isHoveredCard, setIsHoveredCard] = useState<number | null>(null);
 
   return (

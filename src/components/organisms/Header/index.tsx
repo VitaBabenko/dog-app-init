@@ -6,27 +6,22 @@ import { IconPlus } from '../../atoms/IconPlus';
 import LogoIcon from '../../../assets/icons/LogoIcon.svg?react';
 
 const StyledAppBar = styled(AppBar)(({ theme }) => ({
-  alignItems: 'center',
+  width: '1440px',
   borderRadius: '0px 0px 32px 32px',
-  padding: '20px 100px 16px 100px',
+  padding: '20px 120px 16px 120px',
   backgroundColor: theme.palette.grey[500],
-  boxShadow: `3px 3px 0px 0px ${theme.palette.text.secondary}`
+  boxShadow: `3px 3px 0px 0px ${theme.palette.text.secondary}`,
+  marginBottom: '24px'
 }));
 
 const StyledBox = styled(Box)({
   display: 'flex',
-  alignItems: 'center',
-  maxWidth: '1161px'
+  justifyContent: 'space-between'
 });
 
 const StyledNavBarBox = styled(Box)({
   marginLeft: '60px',
   marginRight: '40px'
-});
-
-const StyledIconPlusBox = styled(Box)({
-  display: 'flex',
-  margin: '0 0 0 30px'
 });
 
 export const Header = () => (
@@ -41,9 +36,7 @@ export const Header = () => (
         <NavBar />
       </StyledNavBarBox>
       <IconHeart state="hover" />
-      <StyledIconPlusBox>
-        <IconPlus />
-      </StyledIconPlusBox>
+      <IconPlus />
     </StyledBox>
   </StyledAppBar>
 );
