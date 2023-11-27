@@ -12,9 +12,6 @@ type SortingWrapProps = {
 
 const StyledStack = styled(Stack)({
   justifyContent: 'flex-end',
-  width: '1160px',
-  marginLeft: 'auto',
-  marginRight: 'auto',
   marginBottom: '36px'
 });
 

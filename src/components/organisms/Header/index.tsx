@@ -10,8 +10,7 @@ const StyledAppBar = styled(AppBar)(({ theme }) => ({
   borderRadius: '0px 0px 32px 32px',
   padding: '20px 120px 16px 120px',
   backgroundColor: theme.palette.grey[500],
-  boxShadow: `3px 3px 0px 0px ${theme.palette.text.secondary}`,
-  marginBottom: '24px'
+  boxShadow: `3px 3px 0px 0px ${theme.palette.text.secondary}`
 }));
 
 const StyledBox = styled(Box)({
