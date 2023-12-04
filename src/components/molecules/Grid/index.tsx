@@ -80,6 +80,7 @@ export const Grid: FC<GridProps> = ({ page, order }) => {
       {isLoading && <Skeleton variant="rounded" width={1160} height={844} />}
       {(favouritesImages || []).map((item, index) => {
         const isHover = isHoveredCard === index;
+        const itemBreeds = item.breeds;
         const breed = item.breeds[0];
 
         return (
@@ -118,7 +119,7 @@ export const Grid: FC<GridProps> = ({ page, order }) => {
                 )}
               </IconButton>
             )}
-            {isHover && breed !== undefined && (
+            {isHover && breed !== undefined && itemBreeds.length > 0 && (
               <Link to={`breeds/${breed.id}`}>
                 <Button
                   variant="contained"
