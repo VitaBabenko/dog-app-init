@@ -1,36 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Gallery should match snapshot Component 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-0 {
+  display: block;
+  background-color: rgba(95, 85, 109, 0.11);
+  height: 1.2em;
+  border-radius: 4px;
+  -webkit-animation: animation-0 2s ease-in-out 0.5s infinite;
+  animation: animation-0 2s ease-in-out 0.5s infinite;
+}
+
+.emotion-1 {
   display: grid;
   grid-template-columns: repeat(3, 372px);
   grid-gap: 22px;
+  margin-bottom: 25px;
 }
 
-.emotion-0 img {
+.emotion-1 img {
   margin-bottom: 14px;
   height: 274px;
 }
 
-.emotion-0 p {
+.emotion-1 p {
   padding: 0px 28px;
 }
 
-.emotion-0 .MuiButton-text {
+.emotion-1 .MuiButton-text {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
+  bottom: 8px;
+  right: 5px;
   display: block;
   background-color: transparent;
   color: #FFCF32;
 }
 
 <div>
-  <div>
-    Loading...
-  </div>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-pulse emotion-0"
+    style="width: 1160px; height: 844px;"
+  />
   <div
-    class="MuiBox-root emotion-0"
+    class="MuiBox-root emotion-1"
   />
 </div>
 `;

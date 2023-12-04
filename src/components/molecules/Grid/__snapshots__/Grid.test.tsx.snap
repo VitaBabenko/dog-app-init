@@ -1,14 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Grid should match snapshot Component 1`] = `
+@keyframes animation-0 {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 .emotion-0 {
   display: grid;
   grid-template-columns: repeat(4, 275px);
   grid-auto-rows: 196px;
   grid-gap: 20px;
-  width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-bottom: 25px;
 }
 
 .emotion-0 .MuiBox-root:first-of-type {
@@ -61,12 +73,23 @@ exports[`Grid should match snapshot Component 1`] = `
   grid-row: 4;
 }
 
+.emotion-1 {
+  display: block;
+  background-color: rgba(95, 85, 109, 0.11);
+  height: 1.2em;
+  border-radius: 4px;
+  -webkit-animation: animation-0 2s ease-in-out 0.5s infinite;
+  animation: animation-0 2s ease-in-out 0.5s infinite;
+}
+
 <div>
-  <div>
-    Loading...
-  </div>
   <div
     class="MuiBox-root emotion-0"
-  />
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-pulse emotion-1"
+      style="width: 1160px; height: 844px;"
+    />
+  </div>
 </div>
 `;

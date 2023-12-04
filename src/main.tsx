@@ -6,7 +6,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App';
 import { api } from './services/api';
 import { store } from './services/store';
-import './index.css';
 import { DogAppThemeProvider } from './theme';
 import {
   MainPage,
@@ -29,11 +28,11 @@ const router = createBrowserRouter([
         element: <MainPage />
       },
       {
-        path: 'breed',
+        path: 'breeds',
         element: <BreedsPage />
       },
       {
-        path: 'breed/:breedId',
+        path: 'breeds/:breedId',
         element: <BreedItemPage />
       },
       {

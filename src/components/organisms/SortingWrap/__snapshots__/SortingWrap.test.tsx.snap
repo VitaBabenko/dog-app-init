@@ -13,9 +13,6 @@ exports[`SortingWrap should match snapshot Component 1`] = `
   -ms-flex-pack: end;
   -webkit-justify-content: flex-end;
   justify-content: flex-end;
-  width: 1160px;
-  margin-left: auto;
-  margin-right: auto;
   margin-bottom: 36px;
 }
 

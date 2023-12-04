@@ -1,11 +1,11 @@
 import { api } from './api';
 
-export interface Favourite {
+export interface FavouriteAdd {
   image_id: string;
   sub_id?: string;
 }
 
-type FavouriteResponse = {
+export interface Favourite {
   created_at: string;
   id: string;
   image: {
@@ -15,11 +15,14 @@ type FavouriteResponse = {
   image_id: string;
   sub_id: string | null;
   user_id: string;
-}[];
+}
 
-export const favouriteApi = api.injectEndpoints({
+type FavouritesResponse = Favourite[];
+type FavouriteResponse = Favourite;
+
+export const favouritesApi = api.injectEndpoints({
   endpoints: build => ({
-    addFavourites: build.mutation<unknown, Favourite>({
+    addFavourites: build.mutation<unknown, FavouriteAdd>({
       query: body => ({
         url: `favourites`,
         method: 'POST',
@@ -27,14 +30,23 @@ export const favouriteApi = api.injectEndpoints({
       }),
       invalidatesTags: [{ type: 'Favourites', id: 'LIST' }]
     }),
-    getFavourites: build.query<FavouriteResponse, void>({
+    getFavourites: build.query<FavouritesResponse, void>({
       query: () => ({ url: 'favourites' }),
       providesTags: (result = []) => [
         ...result.map(({ id }) => ({ type: 'Favourites', id }) as const),
         { type: 'Favourites' as const, id: 'LIST' }
       ]
+    }),
+    getFavouriteById: build.query<FavouriteResponse, { id?: number }>({
+      query: ({ id }) => ({
+        url: `favourites/${id}`
+      })
     })
   })
 });
 
-export const { useAddFavouritesMutation, useGetFavouritesQuery } = favouriteApi;
+export const {
+  useAddFavouritesMutation,
+  useGetFavouritesQuery,
+  useGetFavouriteByIdQuery
+} = favouritesApi;
