@@ -80,7 +80,6 @@ export const Grid: FC<GridProps> = ({ page, order }) => {
       {isLoading && <Skeleton variant="rounded" width={1160} height={844} />}
       {(favouritesImages || []).map((item, index) => {
         const isHover = isHoveredCard === index;
-        console.log(item.breeds);
 
         return (
           <CardItem
