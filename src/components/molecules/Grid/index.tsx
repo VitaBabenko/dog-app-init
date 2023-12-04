@@ -81,7 +81,6 @@ export const Grid: FC<GridProps> = ({ page, order }) => {
       {(favouritesImages || []).map((item, index) => {
         const isHover = isHoveredCard === index;
         const itemBreeds = item.breeds;
-        const breed = item.breeds[0];
 
         return (
           <CardItem
@@ -119,8 +118,8 @@ export const Grid: FC<GridProps> = ({ page, order }) => {
                 )}
               </IconButton>
             )}
-            {isHover && breed !== undefined && itemBreeds.length > 0 && (
-              <Link to={`breeds/${breed.id}`}>
+            {isHover && itemBreeds.length > 0 && (
+              <Link to={`breeds/${itemBreeds[0].id}`}>
                 <Button
                   variant="contained"
                   color="secondary"
@@ -136,7 +135,7 @@ export const Grid: FC<GridProps> = ({ page, order }) => {
                   }}
                 >
                   <IconDogFoot state="secondary" />
-                  {breed.name}
+                  {itemBreeds[0].name}
                   <ArrowRight />
                 </Button>
               </Link>
