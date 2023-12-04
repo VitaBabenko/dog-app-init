@@ -1,11 +1,8 @@
 import { useParams } from 'react-router-dom';
+import { BreedId } from '../components/molecules/BreedId';
 
 export const BreedItemPage = () => {
   const { breedId } = useParams();
-  return (
-    <div>
-      <h1>Breed: {breedId}</h1>
-      <div>Gallery</div>
-    </div>
-  );
+
+  return <BreedId breedId={breedId} />;
 };

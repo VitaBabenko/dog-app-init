@@ -1,7 +1,7 @@
 import { createSelector } from '@reduxjs/toolkit';
 import { RootState } from '../store';
 import { imagesApi, Order } from '../images';
-import { favouriteApi } from '../favourites';
+import { favouritesApi } from '../favourites';
 
 export interface GetImagesProps {
   getImagesProps: {
@@ -18,7 +18,7 @@ export const selectImagesWithFavourites = ({
     (state: RootState) =>
       imagesApi.endpoints.getImages.select(getImagesProps)(state)?.data || [],
     (state: RootState) =>
-      favouriteApi.endpoints.getFavourites.select()(state)?.data || [],
+      favouritesApi.endpoints.getFavourites.select()(state)?.data || [],
     (images, favourites) => {
       const favouriteIds = new Set(
         favourites.map(favourite => favourite.image_id)

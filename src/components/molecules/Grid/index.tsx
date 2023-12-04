@@ -1,10 +1,13 @@
-import { Box, IconButton, Skeleton, styled } from '@mui/material';
+import { Box, IconButton, Button, Skeleton, styled } from '@mui/material';
 import { FC, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Order } from '../../../services/images';
+import { useAddFavouritesMutation } from '../../../services/favourites';
 import { CardItem } from '../../atoms/CardItem';
 import { IconHeart } from '../../atoms/IconHeart';
-import { useAddFavouritesMutation } from '../../../services/favourites';
 import { useGetImagesWithFavourites } from '../../../hooks';
+import { IconDogFoot } from '../../atoms/IconDogFoot';
+import { ArrowRight } from '../../atoms/ArrowRight';
 
 type GridProps = {
   page: number;
@@ -16,7 +19,7 @@ const StyledBox = styled(Box)({
   gridTemplateColumns: 'repeat(4, 275px)',
   gridAutoRows: '196px',
   gridGap: '20px',
-  marginBottom: '20px',
+  marginBottom: '25px',
   '& .MuiBox-root:first-of-type': {
     gridColumn: '1 / 3',
     gridRow: '1 / 3'
@@ -77,6 +80,7 @@ export const Grid: FC<GridProps> = ({ page, order }) => {
       {isLoading && <Skeleton variant="rounded" width={1160} height={844} />}
       {(favouritesImages || []).map((item, index) => {
         const isHover = isHoveredCard === index;
+        const breed = item.breeds[0];
 
         return (
           <CardItem
@@ -113,6 +117,28 @@ export const Grid: FC<GridProps> = ({ page, order }) => {
                   <IconHeart state="default" />
                 )}
               </IconButton>
+            )}
+            {isHover && breed !== undefined && (
+              <Link to={`breeds/${breed.id}`}>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  sx={{
+                    display: 'flex',
+                    gap: '10px',
+                    position: 'absolute',
+                    bottom: '10px',
+                    left: '50%',
+                    transform: 'translate(-50%)',
+                    width: '245px',
+                    padding: '10px 20px'
+                  }}
+                >
+                  <IconDogFoot state="secondary" />
+                  {breed.name}
+                  <ArrowRight />
+                </Button>
+              </Link>
             )}
           </CardItem>
         );

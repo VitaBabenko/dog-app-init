@@ -26,6 +26,7 @@ export interface Breed {
 }
 
 type BreedsResponse = Breed[];
+type BreedIdResponse = Breed;
 
 export interface User {
   first_name: string;
@@ -44,8 +45,13 @@ export const breedsApi = api.injectEndpoints({
         ...result.map(({ id }) => ({ type: 'Breeds', id }) as const),
         { type: 'Breeds' as const, id: 'LIST' }
       ]
+    }),
+    getBreedById: build.query<BreedIdResponse, { id?: number }>({
+      query: ({ id }) => ({
+        url: `breeds/${id}`
+      })
     })
   })
 });
 
-export const { useGetBreedsQuery } = breedsApi;
+export const { useGetBreedsQuery, useGetBreedByIdQuery } = breedsApi;

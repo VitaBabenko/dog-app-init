@@ -20,6 +20,7 @@ export interface Image {
 }
 
 type ImagesResponse = Image[];
+// type ImageResponse = Image;
 
 export interface User {
   first_name: string;
@@ -47,8 +48,13 @@ export const imagesApi = api.injectEndpoints({
         ...result.map(({ id }) => ({ type: 'Images', id }) as const),
         { type: 'Images' as const, id: 'LIST' }
       ]
+    }),
+    getImageById: build.query<Image, { imageId: string | undefined }>({
+      query: ({ imageId }) => ({
+        url: `images/${imageId}`
+      })
     })
   })
 });
 
-export const { useGetImagesQuery } = imagesApi;
+export const { useGetImagesQuery, useGetImageByIdQuery } = imagesApi;

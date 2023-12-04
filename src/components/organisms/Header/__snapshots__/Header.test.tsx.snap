@@ -22,12 +22,9 @@ exports[`Header should match snapshot Component 1`] = `
   position: static;
   background-color: #921FED;
   color: #FCFAFA;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  width: 1440px;
   border-radius: 0px 0px 32px 32px;
-  padding: 20px 100px 16px 100px;
+  padding: 20px 140px;
   background-color: #ADA7B8;
   box-shadow: 3px 3px 0px 0px #000000;
 }
@@ -37,11 +34,9 @@ exports[`Header should match snapshot Component 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  max-width: 1161px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
 }
 
 .emotion-2 {
@@ -277,14 +272,6 @@ exports[`Header should match snapshot Component 1`] = `
   box-shadow: 2px 2px 0px 0px #000000;
 }
 
-.emotion-8 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 0 0 30px;
-}
-
 <div>
   <header
     class="MuiPaper-root MuiPaper-elevation MuiPaper-elevation4 MuiAppBar-root MuiAppBar-colorPrimary MuiAppBar-positionStatic emotion-0"
@@ -367,15 +354,11 @@ exports[`Header should match snapshot Component 1`] = `
         classname="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1v8usww-MuiSvgIcon-root"
         focusable="false"
       />
-      <div
-        class="MuiBox-root emotion-8"
-      >
-        <test-file-stub
-          aria-hidden="true"
-          classname="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1v8usww-MuiSvgIcon-root"
-          focusable="false"
-        />
-      </div>
+      <test-file-stub
+        aria-hidden="true"
+        classname="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1v8usww-MuiSvgIcon-root"
+        focusable="false"
+      />
     </div>
   </header>
 </div>
