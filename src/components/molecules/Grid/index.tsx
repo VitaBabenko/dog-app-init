@@ -80,7 +80,7 @@ export const Grid: FC<GridProps> = ({ page, order }) => {
       {isLoading && <Skeleton variant="rounded" width={1160} height={844} />}
       {(favouritesImages || []).map((item, index) => {
         const isHover = isHoveredCard === index;
-        const itemBreeds = item.breeds;
+        console.log(item.breeds);
 
         return (
           <CardItem
@@ -118,8 +118,8 @@ export const Grid: FC<GridProps> = ({ page, order }) => {
                 )}
               </IconButton>
             )}
-            {isHover && itemBreeds.length > 0 && (
-              <Link to={`breeds/${itemBreeds[0].id}`}>
+            {isHover && item.breeds.length === 1 && (
+              <Link to={`breeds/${item.breeds[0].id}`}>
                 <Button
                   variant="contained"
                   color="secondary"
@@ -135,7 +135,7 @@ export const Grid: FC<GridProps> = ({ page, order }) => {
                   }}
                 >
                   <IconDogFoot state="secondary" />
-                  {itemBreeds[0].name}
+                  {item.breeds[0].name}
                   <ArrowRight />
                 </Button>
               </Link>
