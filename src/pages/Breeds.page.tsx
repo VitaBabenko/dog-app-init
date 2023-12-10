@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Gallery } from '../components/molecules/Gallery';
+import { BreedsGallery } from '../components/molecules/BreedsGallery';
 import { PaginationWrap } from '../components/organisms/PaginationWrap';
 
 export const BreedsPage = () => {
@@ -11,7 +11,7 @@ export const BreedsPage = () => {
 
   return (
     <>
-      <Gallery page={page} />
+      <BreedsGallery page={page} />
       <PaginationWrap page={page} handleChange={handleChange} />
     </>
   );

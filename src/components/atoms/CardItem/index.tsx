@@ -12,11 +12,11 @@ export const CardItem = styled(Box)<CardItemProps>(
     backgroundPosition: 'center',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
+    overflow: 'hidden',
     img: {
       display: 'block',
       width: '100%',
-      objectFit: 'cover',
-      borderRadius: 'inherit'
+      objectFit: 'cover'
     },
     maxWidth: 590,
     minHeight: 90,
