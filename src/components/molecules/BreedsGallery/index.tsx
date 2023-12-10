@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { CardItem } from '../../atoms/CardItem';
 import { useGetBreedsQuery } from '../../../services/breeds';
 
-type GalleryProps = {
+type BreedsGalleryProps = {
   page: number;
 };
 
@@ -30,7 +30,7 @@ const StyledBox = styled(Box)(({ theme }) => ({
   }
 }));
 
-export const Gallery: FC<GalleryProps> = ({ page }) => {
+export const BreedsGallery: FC<BreedsGalleryProps> = ({ page }) => {
   const { data: breeds, isLoading } = useGetBreedsQuery({ limit: 6, page });
 
   const [isHoveredCard, setIsHoveredCard] = useState<number | null>(null);

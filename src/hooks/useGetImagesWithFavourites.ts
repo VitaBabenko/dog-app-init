@@ -14,12 +14,14 @@ export const useGetImagesWithFavourites = ({
   page = 0,
   order = Order.ASC
 }: GetImagesWithFavouritesProps) => {
-  const { isLoading: isLoadingImages } = useGetImagesQuery({
-    limit,
-    page,
-    order
-  });
-  const { isLoading: isLoadingFavourites } = useGetFavouritesQuery();
+  const { isLoading: isLoadingImages, isFetching: isFetchingImages } =
+    useGetImagesQuery({
+      limit,
+      page,
+      order
+    });
+  const { isLoading: isLoadingFavourites, isFetching: isFetchingFavourites } =
+    useGetFavouritesQuery();
   const favouritesImages = useTypedSelector(
     selectImagesWithFavourites({
       getImagesProps: { limit, page, order }
@@ -28,6 +30,10 @@ export const useGetImagesWithFavourites = ({
 
   return {
     data: favouritesImages,
-    isLoading: isLoadingImages || isLoadingFavourites
+    isLoading:
+      isLoadingImages ||
+      isLoadingFavourites ||
+      isFetchingImages ||
+      isFetchingFavourites
   };
 };

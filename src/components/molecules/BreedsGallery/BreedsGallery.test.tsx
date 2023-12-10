@@ -1,8 +1,8 @@
 import { composeStories } from '@storybook/react';
-import * as stories from './Gallery.stories';
+import * as stories from './BreedsGallery.stories';
 import { testSnapshot } from '../../../test/utils/snapshot.utils';
 
-describe('Gallery', () => {
+describe('BreedsGallery', () => {
   const { Primary } = composeStories(stories);
   testSnapshot(<Primary />);
 });

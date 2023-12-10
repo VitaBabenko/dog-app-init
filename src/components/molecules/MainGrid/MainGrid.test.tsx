@@ -1,8 +1,8 @@
 import { composeStories } from '@storybook/react';
-import * as stories from './Grid.stories';
+import * as stories from './MainGrid.stories';
 import { testSnapshot } from '../../../test/utils/snapshot.utils';
 
-describe('Grid', () => {
+describe('MainGrid', () => {
   const { Primary } = composeStories(stories);
   testSnapshot(<Primary />);
 });

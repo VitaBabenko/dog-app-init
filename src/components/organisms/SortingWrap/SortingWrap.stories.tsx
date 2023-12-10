@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { SortingWrap } from '.';
+import { Order } from '../../../services/images';
 
 const meta = {
   title: 'Organisms/SortingWrap',
@@ -11,6 +12,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    order: 1
+    order: Order.ASC
   }
 };

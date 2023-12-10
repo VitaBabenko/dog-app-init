@@ -35,11 +35,12 @@ export const BreedId: FC<BreedIdProps> = ({ breedId }) => {
 
   console.log(breed);
 
-  const imageId = breed?.reference_image_id;
-
-  const { data: image, isLoading: isLoadingImage } = useGetImageByIdQuery({
-    imageId
-  });
+  const { data: image, isLoading: isLoadingImage } = useGetImageByIdQuery(
+    {
+      imageId: breed?.reference_image_id
+    },
+    { skip: !breed?.reference_image_id }
+  );
 
   return (
     <StyledAllBox>

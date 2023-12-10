@@ -30,9 +30,9 @@ export interface User {
 }
 
 export enum Order {
-  RANDOM,
-  ASC,
-  DESC
+  RANDOM = 'RANDOM',
+  ASC = 'ASC',
+  DESC = 'DESC'
 }
 
 export const imagesApi = api.injectEndpoints({

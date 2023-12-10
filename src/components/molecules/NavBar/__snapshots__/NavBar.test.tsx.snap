@@ -245,7 +245,7 @@ exports[`NavBar should match snapshot Component 1`] = `
   </a>
   <a
     class=""
-    href="/breed"
+    href="/breeds"
   >
     <button
       class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium emotion-1"

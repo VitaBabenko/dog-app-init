@@ -9,7 +9,7 @@ import { useGetImagesWithFavourites } from '../../../hooks';
 import { IconDogFoot } from '../../atoms/IconDogFoot';
 import { ArrowRight } from '../../atoms/ArrowRight';
 
-type GridProps = {
+type MainGridProps = {
   page: number;
   order: Order;
 };
@@ -62,7 +62,7 @@ const StyledBox = styled(Box)({
   }
 });
 
-export const Grid: FC<GridProps> = ({ page, order }) => {
+export const MainGrid: FC<MainGridProps> = ({ page, order }) => {
   const [addFavourite] = useAddFavouritesMutation();
   const { data: favouritesImages, isLoading } = useGetImagesWithFavourites({
     page,

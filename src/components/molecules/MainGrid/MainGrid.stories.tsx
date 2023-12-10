@@ -1,17 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Grid } from '.';
+import { MainGrid } from '.';
+import { Order } from '../../../services/images';
 
 const meta = {
-  title: 'Molecules/Grid',
-  component: Grid
-} satisfies Meta<typeof Grid>;
+  title: 'Molecules/MainGrid',
+  component: MainGrid
+} satisfies Meta<typeof MainGrid>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    order: 1,
+    order: Order.ASC,
     page: 1
   }
 };

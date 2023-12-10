@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Gallery } from '.';
+import { BreedsGallery } from '.';
 
 const meta = {
-  title: 'Molecules/Gallery',
-  component: Gallery
-} satisfies Meta<typeof Gallery>;
+  title: 'Molecules/BreedsGallery',
+  component: BreedsGallery
+} satisfies Meta<typeof BreedsGallery>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
