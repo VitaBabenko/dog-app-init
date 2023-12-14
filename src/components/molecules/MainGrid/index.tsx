@@ -2,10 +2,10 @@ import { Box, IconButton, Button, Skeleton, styled } from '@mui/material';
 import { FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Order } from '../../../services/images';
-import { useAddFavouritesMutation } from '../../../services/favourites';
 import { CardItem } from '../../atoms/CardItem';
 import { IconHeart } from '../../atoms/IconHeart';
 import { useGetImagesWithFavourites } from '../../../hooks';
+import { useAddFavouritesMutation } from '../../../services/favourites';
 import { IconDogFoot } from '../../atoms/IconDogFoot';
 import { ArrowRight } from '../../atoms/ArrowRight';
 
@@ -63,16 +63,19 @@ const StyledBox = styled(Box)({
 });
 
 export const MainGrid: FC<MainGridProps> = ({ page, order }) => {
-  const [addFavourite] = useAddFavouritesMutation();
+  const [addFavourites] = useAddFavouritesMutation();
   const { data: favouritesImages, isLoading } = useGetImagesWithFavourites({
     page,
     order
   });
 
+  console.log(favouritesImages);
+
   const [isHoveredCard, setIsHoveredCard] = useState<number | null>(null);
 
   const handleBtnAdd = (id: string) => () => {
-    addFavourite({ image_id: id });
+    console.log('add favourite');
+    addFavourites({ image_id: id });
   };
 
   return (
@@ -90,14 +93,13 @@ export const MainGrid: FC<MainGridProps> = ({ page, order }) => {
             onMouseOut={() => setIsHoveredCard(null)}
           >
             <img src={item.url} alt={item.id} height="100%" />
-            {item.isFavourite ? (
+            {item.isFavourites ? (
               <IconButton
                 sx={{
                   position: 'absolute',
                   top: '10px',
                   right: '10px'
                 }}
-                onClick={handleBtnAdd(item.id)}
               >
                 <IconHeart state="active" />
               </IconButton>
