@@ -25,7 +25,7 @@ export const selectImagesWithFavourites = ({
       );
       return images.map(image => ({
         ...image,
-        isFavourite: favouriteIds.has(image.id)
+        isFavourites: favouriteIds.has(image.id)
       }));
     }
   );
