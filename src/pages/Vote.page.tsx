@@ -1,7 +1,7 @@
 import { IconButton, SvgIcon } from '@mui/material';
 import { useGetImagesWithVotes } from '../hooks';
 import { useAddVotesMutation } from '../services/votes';
-import { CardItem } from '../components/atoms/CardItem';
+import { CardWrapper } from '../components/atoms/CardWrapper';
 import IconLike from '../assets/icons/IconLike.svg?react';
 import IconDisLike from '../assets/icons/IconDisLike.svg?react';
 
@@ -23,7 +23,7 @@ export const VotePage = () => {
     <>
       {isLoading && <div>loading...</div>}
       {(votesImages || []).map(item => (
-        <CardItem key={item.id} variant="smallRadiusBorder" borderRadius={0}>
+        <CardWrapper key={item.id} variant="smallRadiusBorder" borderRadius={0}>
           <img src={item.url} alt={item.id} height="100%" />
           <IconButton
             color="primary"
@@ -58,7 +58,7 @@ export const VotePage = () => {
               sx={{ width: 17, height: 20 }}
             />
           </IconButton>
-        </CardItem>
+        </CardWrapper>
       ))}
     </>
   );

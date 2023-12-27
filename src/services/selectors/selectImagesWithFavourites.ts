@@ -19,13 +19,14 @@ export const selectImagesWithFavourites = ({
       imagesApi.endpoints.getImages.select(getImagesProps)(state)?.data || [],
     (state: RootState) =>
       favouritesApi.endpoints.getFavourites.select()(state)?.data || [],
-    (images, favourites) => {
-      const favouriteIds = new Set(
-        favourites.map(favourite => favourite.image_id)
-      );
-      return images.map(image => ({
-        ...image,
-        isFavourites: favouriteIds.has(image.id)
-      }));
-    }
+    (images, favourites) =>
+      images.map(image => {
+        const currentFavourite = favourites.find(
+          favourite => favourite.image_id === image.id
+        );
+        return {
+          ...image,
+          favouriteId: currentFavourite ? currentFavourite.id : null
+        };
+      })
   );

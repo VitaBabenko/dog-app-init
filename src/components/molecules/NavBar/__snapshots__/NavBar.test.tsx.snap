@@ -59,6 +59,8 @@ exports[`NavBar should match snapshot Component 1`] = `
   box-shadow: 3px 3px 0px 0px #000000;
   margin-right: 50px;
   padding: 4px 10px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-0::-moz-focus-inner {
@@ -177,6 +179,8 @@ exports[`NavBar should match snapshot Component 1`] = `
   background-color: transparent;
   margin-right: 50px;
   padding: 4px 10px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .emotion-1::-moz-focus-inner {

@@ -16,31 +16,22 @@ exports[`BreedsGallery should match snapshot Component 1`] = `
 }
 
 .emotion-0 {
-  display: block;
-  background-color: rgba(95, 85, 109, 0.11);
-  height: 1.2em;
-  border-radius: 4px;
-  -webkit-animation: animation-0 2s ease-in-out 0.5s infinite;
-  animation: animation-0 2s ease-in-out 0.5s infinite;
-}
-
-.emotion-1 {
   display: grid;
   grid-template-columns: repeat(3, 372px);
   grid-gap: 22px;
   margin-bottom: 25px;
 }
 
-.emotion-1 img {
+.emotion-0 img {
   margin-bottom: 14px;
   height: 274px;
 }
 
-.emotion-1 p {
+.emotion-0 p {
   padding: 0px 28px;
 }
 
-.emotion-1 .MuiButton-text {
+.emotion-0 .MuiButton-text {
   position: absolute;
   bottom: 8px;
   right: 5px;
@@ -49,13 +40,23 @@ exports[`BreedsGallery should match snapshot Component 1`] = `
   color: #FFCF32;
 }
 
+.emotion-1 {
+  display: block;
+  background-color: rgba(95, 85, 109, 0.11);
+  height: 1.2em;
+  border-radius: 4px;
+  -webkit-animation: animation-0 2s ease-in-out 0.5s infinite;
+  animation: animation-0 2s ease-in-out 0.5s infinite;
+}
+
 <div>
-  <span
-    class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-pulse emotion-0"
-    style="width: 1160px; height: 844px;"
-  />
   <div
-    class="MuiBox-root emotion-1"
-  />
+    class="MuiBox-root emotion-0"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-rounded MuiSkeleton-pulse emotion-1"
+      style="width: 1160px; height: 1000px;"
+    />
+  </div>
 </div>
 `;

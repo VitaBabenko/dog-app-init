@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { Button, styled } from '@mui/material';
+import { StyledButton } from './NavBar.styled';
 
 const headerMenu = [
   {
@@ -28,11 +28,6 @@ const headerMenu = [
     path: '/upload'
   }
 ];
-
-const StyledButton = styled(Button)`
-  margin-right: 50px;
-  padding: 4px 10px;
-`;
 
 export const NavBar = () => (
   <>

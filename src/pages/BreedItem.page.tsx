@@ -1,8 +1,8 @@
 import { useParams } from 'react-router-dom';
-import { BreedId } from '../components/molecules/BreedId';
+import { BreedItem } from '../components/molecules/BreedItem';
 
 export const BreedItemPage = () => {
   const { breedId } = useParams();
 
-  return <BreedId breedId={breedId} />;
+  return <BreedItem breedId={breedId} />;
 };
