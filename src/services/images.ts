@@ -20,7 +20,6 @@ export interface Image {
 }
 
 type ImagesResponse = Image[];
-// type ImageResponse = Image;
 
 export interface User {
   first_name: string;

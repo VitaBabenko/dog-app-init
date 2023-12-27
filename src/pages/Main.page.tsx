@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { useGetImagesWithFavourites } from '../hooks';
-import { SortingWrap } from '../components/organisms/SortingWrap';
+import { SortingBar } from '../components/organisms/SortingBar';
 import { MainGrid } from '../components/molecules/MainGrid';
 import { Order } from '../services/images';
-import { PaginationWrap } from '../components/organisms/PaginationWrap';
+import { PaginationBar } from '../components/organisms/PaginationBar';
 
 export const MainPage = () => {
   const [page, setPage] = useState(1);
@@ -23,9 +23,9 @@ export const MainPage = () => {
 
   return (
     <>
-      {!isLoading && <SortingWrap order={order} onOrderClick={onOrderClick} />}
+      <SortingBar order={order} onOrderClick={onOrderClick} />
       <MainGrid page={page} order={order} />
-      {!isLoading && <PaginationWrap page={page} handleChange={handleChange} />}
+      {!isLoading && <PaginationBar page={page} handleChange={handleChange} />}
     </>
   );
 };

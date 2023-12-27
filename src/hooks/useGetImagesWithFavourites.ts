@@ -20,8 +20,7 @@ export const useGetImagesWithFavourites = ({
       page,
       order
     });
-  const { isLoading: isLoadingFavourites, isFetching: isFetchingFavourites } =
-    useGetFavouritesQuery();
+  const { isLoading: isLoadingFavourites } = useGetFavouritesQuery();
   const favouritesImages = useTypedSelector(
     selectImagesWithFavourites({
       getImagesProps: { limit, page, order }
@@ -30,10 +29,6 @@ export const useGetImagesWithFavourites = ({
 
   return {
     data: favouritesImages,
-    isLoading:
-      isLoadingImages ||
-      isLoadingFavourites ||
-      isFetchingImages ||
-      isFetchingFavourites
+    isLoading: isLoadingImages || isLoadingFavourites || isFetchingImages
   };
 };
