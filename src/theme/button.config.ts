@@ -5,7 +5,7 @@ export const MuiButtonConfig: Components<Theme>['MuiButton'] = {
   styleOverrides: {
     root: ({ theme }) => ({
       fontFamily: ` @font-face {
-        font-family: 'Dosis';
+        font-family: 'Dosis', sans-serif;
         font-style: normal;
         font-weight: 400;
         src: local('Dosis'), local('Dosis-Regular'), url(${DosisFont}) format('ttf');
