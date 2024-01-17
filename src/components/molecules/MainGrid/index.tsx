@@ -1,9 +1,8 @@
-import { Skeleton } from '@mui/material';
 import { FC } from 'react';
 import { Order } from '../../../services/images';
 import { useGetImagesWithFavourites } from '../../../hooks';
 import { BreedCardMain } from '../../atoms/BreedCardMain';
-import { StyledBox } from './MainGrid.styled';
+import { StyledBox, StyledSkeleton } from './MainGrid.styled';
 
 type MainGridProps = {
   page: number;
@@ -20,7 +19,7 @@ export const MainGrid: FC<MainGridProps> = ({ page, order }) => {
 
   return (
     <StyledBox>
-      {isLoading && <Skeleton variant="rounded" width={1160} height={844} />}
+      {isLoading && <StyledSkeleton variant="rounded" />}
       {(favouritesImages || []).map(({ id, url, breeds, favouriteId }) => (
         <BreedCardMain
           key={id}

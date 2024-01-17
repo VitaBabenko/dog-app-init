@@ -41,8 +41,15 @@ const theme = createTheme({
     fontSize: 20,
     fontFamily: "'Dosis', sans-serif",
     fontWeightRegular: 400
-    // fontWeightMedium: 500,
-    // fontWeightBold: 600
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 375,
+      md: 768,
+      lg: 1200,
+      xl: 1440
+    }
   },
   components: {
     MuiButton: MuiButtonConfig,
